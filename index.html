@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陈旭冉（Xuran Chen）的个人主页与联系方式。">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>陈旭冉 Xuran Chen</title>
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --surface: #fffef9;
+      --ink: #202522;
+      --muted: #626862;
+      --line: #d8d5cc;
+      --accent: #204f3b;
+      --serif: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+
+    main {
+      width: min(1040px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 520px;
+      padding: 88px 0 76px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      align-items: center;
+      gap: 80px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 { font-family: var(--serif); }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: -.035em;
+    }
+
+    h1 span {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .42em;
+      font-weight: 400;
+      letter-spacing: .04em;
+    }
+
+    .lead {
+      max-width: 650px;
+      margin: 28px 0 0;
+      color: #3f4641;
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      line-height: 1.85;
+    }
+
+    .hero-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 16px;
+      border: 1px solid var(--accent);
+      border-radius: 2px;
+      color: var(--surface);
+      background: var(--accent);
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .button.secondary { color: var(--accent); background: transparent; }
+    .portrait-wrap { position: relative; }
+    .portrait-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 14px -14px -14px 14px;
+      border: 1px solid #9baa9f;
+    }
+
+    .portrait {
+      position: relative;
+      display: block;
+      width: 250px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      filter: saturate(.82) contrast(1.02);
+    }
+
+    footer {
+      width: min(1040px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 52px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero { min-height: auto; padding: 58px 0 60px; grid-template-columns: 1fr; gap: 44px; }
+      .portrait-wrap { width: 176px; order: -1; }
+      .portrait { width: 176px; }
+      footer { flex-direction: column; gap: 6px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <main id="top">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <p class="eyebrow">Personal Homepage</p>
+        <h1 id="name">陈旭冉<span>Xuran Chen</span></h1>
+        <p class="lead">
+          中国科学院计算技术研究所 · 计算机技术
+        </p>
+        <div class="hero-links">
+          <a class="button" href="mailto:wacxr123@gmail.com">Email</a>
+          <a class="button secondary" href="https://github.com/wacxr123" rel="me">GitHub</a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <img class="portrait" src="assets/profile-000.jpg" width="250" height="250" alt="陈旭冉的个人照片">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 Xuran Chen</span>
+    <span>Last updated: September 2026</span>
+  </footer>
+</body>
+</html>
